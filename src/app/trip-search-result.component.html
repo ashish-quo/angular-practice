@@ -1,0 +1,14 @@
+<div>
+  <h4>Here are the matching trips:</h4>
+  <label for="name">Trip Owner:</label>
+  <label id="name">{{trip.tripOwner.name}}</label><br>
+  <label for="source">Trip Origin:</label>
+  <label id="source">{{trip.tripStartPoint}}</label><br>
+  <label for="destination">Trip Destination:</label>
+  <label id="destination">{{trip.tripDestination}}</label><br>
+  <label for="tripStartTime">Trip Start Time:</label>
+  <label id="tripStartTime">{{trip.tripStartTime}}</label><br>
+  <label for="tripOwnerContact">Contact Number:</label>
+  <label id="tripOwnerContact">{{trip.tripOwner.contactNumber}}</label><br>
+  <!--<google-maps [id]="trip.tripOwner.name"></google-maps>-->
+</div>

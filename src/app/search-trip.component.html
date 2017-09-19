@@ -1,0 +1,28 @@
+<div>
+  <div>
+    <div>
+      <h4>Search for trips here</h4><br>
+      <label class="text-label" for="tripSource">Trip Source:</label>
+      <input class="text-input" type="text" id="tripSource" placeholder="Enter trip source here" #tripSource><br><br>
+      <label class="text-label" for="tripDestination">Trip Destination:</label>
+      <input class="text-input" type="text" id="tripDestination" placeholder="Enter trip destination here" #tripDestination><br><br>
+      <label class="text-label" for="tripStartTimeRange">Trip Start Time:</label>
+      <div id="tripStartTimeRange">
+        From: <input class="text-input" type="datetime-local" id="tripTimeLowerBound" #tripTimeLowerBound> To:
+        <input class="text-input" type="datetime-local" id="tripTimeUpperBound" #tripTimeUpperBound><br><br>
+      </div>
+      <input class="btn" type="button" id="search" value="Search Trips"
+             (click)="searchTrips(tripSource,tripDestination,tripTimeLowerBound,tripTimeUpperBound)">
+    </div>
+  </div>
+  <div id="no-results-message" style="display: none">
+    <h4>No matching trips found at the moment.Register your trip to find your travel partner.</h4>
+  </div>
+  <div *ngIf="searchTripResults" class="searchResults">
+    <div>
+    <div #tripResults *ngFor="let trip of searchTripResults" class="trip-results">
+      <tripSearchResult [trip]="trip"></tripSearchResult>
+    </div>
+    </div>
+  </div>
+</div>

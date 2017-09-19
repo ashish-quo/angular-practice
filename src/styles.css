@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+.btn{
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  background-color:rgb(255, 188, 0);
+  border-radius:3px;
+  box-sizing:border-box;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-size: 16px;
+  height: 40px;
+@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+@include user-select(none);
+}
+
+input[type="text"],input[type="password"],input[type="datetime-local"]
+{
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #666;
+  color: #666;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+label{
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #666;
+  display: inline-block;
+  max-width: 100%;
+  font-family: Roboto Slab,serif;
+}
+.routerLinks{
+  background-color:rgb(255, 188, 0);
+}
+
+.routerLinks a{
+  font-weight: 400;
+  color:black;
+  font-size: 22px;
+  margin-left: 10px;
+  float:right;
+  margin-right: 15px;
+  margin-top: 26px;
+}
+.routerLinks a:hover{
+  text-decoration: none;
+}
+.travel-logo{
+  float:left;
+  margin-left: 20px;
+  width: 85px;
+  height: 85px;
+}
+.travel-appName{
+  float:left;
+  margin-top:26px;
+  font-weight: 600;
+}
+.header{
+  width:100%;
+  background-color:rgb(255, 188, 0);
+  height: 80px;
+}
+h4,h2,h3{
+  margin-top:20px;
+}
+select{
+  height: 34px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.sign-up-form{
+  margin-top: 20px;
+}
+.trip-results{
+  margin-bottom: 10px;
+}

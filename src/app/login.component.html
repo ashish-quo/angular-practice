@@ -1,0 +1,10 @@
+<h4>Enter login credentials here :</h4><br>
+<form>
+<label for="username">Username : </label>
+<input type="text" id="username" placeholder="username" #username><br><br>
+<label for="password">Password : </label>
+<input type="password" id="password" placeholder="password" #password><br><br>
+  <input type="submit" value="Login" (click)="attemptLogin(username,password)" class="btn">
+</form><br>
+<p>Not already a user!<a [routerLink]="['/signUp']"> SignUp </a> with us.</p>
+

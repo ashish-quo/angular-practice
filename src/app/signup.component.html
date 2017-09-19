@@ -1,0 +1,16 @@
+<div>
+  <h4>Sign up with us and find your travel partner!</h4>
+  <form class="sign-up-form">
+    <label for="username">Username: </label>
+    <input type="text" id="username" placeholder="username" #username><br><br>
+    <label for="password">Password: </label>
+    <input type="password" id="password" placeholder="password" #password><br><br>
+    <label for="name">Full name: </label>
+    <input type="text" id="name" #name><br><br>
+    <label for="contact">Contact Number: </label>
+    <input type="tel" id="contact" #contact><br><br>
+    <label for="address">Address: </label>
+    <input type="text" id="address" #address><br><br>
+    <input type="submit" value="SignUp" (click)="signUpUser(username,password,name,contact,address)" class="btn">
+  </form>
+</div>

@@ -1,0 +1,39 @@
+<div>
+  <h4>Planned a trip? Register it here</h4><br>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" value="{{currentUser.name}}" readonly #name><br>
+    </div>
+    <div class="form-group">
+      <label for="name">Contact Number:</label>
+      <input type="text" id="companyName" value="{{currentUser.contactNumber}}" readonly #companyName><br>
+    </div>
+    <div class="form-group">
+      <label for="name">Address:</label>
+      <input type="text" id="address" value="{{currentUser.address}}" readonly #address><br>
+    </div>
+    <div class="form-group">
+      <label for="name">Trip Starting Point:</label>
+      <input type="text" id="tripStartPoint" placeholder="Enter trip starting point here" #tripStartPoint><br>
+    </div>
+    <div class="form-group">
+      <label for="name">Trip Destination:</label>
+      <input type="text" id="tripDestination" placeholder="Enter trip destination here" #tripDestination><br>
+    </div>
+    <div class="form-group">
+      <label for="name">Trip Start Time:</label>
+      <input type="datetime-local" id="startTime" #tripStartTime><br>
+    </div>
+  <input type="button" id="findRoutes" value="Find Routes" (click)="findRoutes(tripStartPoint,tripDestination)" class="btn">
+  </form>
+  <div id="map" style="height: 500px;width: 500px;text-align:center" [hidden]="!routes || routes.length <= 0"></div>
+  <div *ngIf="routes && routes.length > 0">
+  <div class="routeOptions">
+    <select [ngModel]="selectedRouteIndex" (ngModelChange)="routeChanged($event)">
+      <option *ngFor="let route of routes;let i=index" [ngValue]="i">Route {{i}} : (The one with {{routeColors[i]}} color)</option>
+    </select>
+  </div>
+  <input type="button" id="register" value="Register Trip" (click)="registerTrip(tripStartPoint,tripDestination,tripStartTime)" class="btn">
+</div>
+</div>

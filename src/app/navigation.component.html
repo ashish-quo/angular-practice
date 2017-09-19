@@ -1,0 +1,9 @@
+<div *ngIf="isUserLoggedIn()">
+  <div class="routerLinks">
+    <a [routerLink] = "['profile']">User Profile</a>
+    <a [routerLink] = "['register-trip']">Register Trips</a>
+    <a [routerLink] = "['search-trip']">Search Trips</a>
+  </div>
+  <i class="icon icon-user-circle-line"></i>
+</div>
+
